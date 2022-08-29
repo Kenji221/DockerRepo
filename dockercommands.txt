@@ -1,0 +1,41 @@
+■Install
+Amazon linux2 
+#
+sudo yum install -y docker
+sudo systemctl start docker
+sudo usermod -a -G docker ec2-user
+sudo systemctl enable docker
+sudo curl -L https://github.com/docker/compose/releases/download/1.28.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+■Run
+docker run <image-name>
+  -Docker のコンテナを起動する
+docker run -it <image-name> bash
+  -Dockerコンテナを起動させ、コンテナの中に入る
+
+■ps
+docker ps
+docker ps -a 
+　-dockerのコンテナの一覧を表示する
+
+■stop / remove
+docker stop <コンテナ名>
+　-stops container for docker 
+
+docker rm <container name>
+  -remove docker container 
+
+■images
+docker images 
+  -list images of docker 
+
+docker rmi <image name>
+   - Remove docker image
+
+docker pull <image name>
+   -download docker image from library
+
+
+   
+
